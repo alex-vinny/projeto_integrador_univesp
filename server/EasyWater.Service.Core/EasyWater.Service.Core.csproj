@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="7.1.0" />
+	<PackageReference Include="Autofac.Extensions.DependencyInjection.AzureFunctions" Version="7.2.0.92" />
+    <PackageReference Include="FreeSql" Version="3.2.802" />
+    <PackageReference Include="FreeSql.Provider.SqlServer" Version="3.2.802" />
+    <PackageReference Include="FreeSql.Repository" Version="3.2.802" />
+    <PackageReference Include="Microsoft.Azure.WebJobs" Version="3.0.39" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EasyWater.Domain\EasyWater.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

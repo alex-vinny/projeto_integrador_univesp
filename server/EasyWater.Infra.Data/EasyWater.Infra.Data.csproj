@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>    
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+	<PackageReference Include="Autofac.Extensions.DependencyInjection.AzureFunctions" Version="7.2.0.92" />
+	<PackageReference Include="FluentMigrator.Runner" Version="3.3.2" />
+	<PackageReference Include="FluentMigrator.Runner.SqlServer" Version="3.3.2" />
+	<PackageReference Include="FreeSql" Version="3.2.802" />
+	<PackageReference Include="FreeSql.Provider.SqlServer" Version="3.2.802" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EasyWater.Domain\EasyWater.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

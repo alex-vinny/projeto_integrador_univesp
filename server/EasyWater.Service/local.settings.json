@@ -1,0 +1,9 @@
+{
+    "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "DatabaseConnectionString": "Data Source=localhost,1434;Initial Catalog=EasyWater;User ID=sa;Password=root#%123ROOT@@;",
+    //"DatabaseConnectionString": " Server=tcp:localhost,1434;Initial Catalog=EasyWater;Persist Security Info=False;User ID=sa;Password=root#%123ROOT@@;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Authentication=Active Directory Password;"
+  }
+}
