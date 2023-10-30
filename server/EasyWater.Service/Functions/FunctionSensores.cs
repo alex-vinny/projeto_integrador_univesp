@@ -22,7 +22,7 @@ namespace EasyWater.Service.Functions
 
         [FunctionName("RunSensoresTemperatura")]
         public async Task<IActionResult> RunTemperatura(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] [FromBody] TemperaturaModel model,
+            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "sensor/temperatura")] [FromBody] TemperaturaModel model,
             HttpRequest req,
             ILogger log)
         {
@@ -41,7 +41,7 @@ namespace EasyWater.Service.Functions
 
         [FunctionName("RunSensoresHumidade")]
         public async Task<IActionResult> RunHumidade(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] [FromBody] HumidadeModel model,
+            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "sensor/humidade")] [FromBody] HumidadeModel model,
             HttpRequest req,
             ILogger log)
         {
@@ -60,7 +60,7 @@ namespace EasyWater.Service.Functions
 
         [FunctionName("RunSensoresHumidadeSolo")]
         public async Task<IActionResult> RunHumidadeSolo(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)][FromBody] HumidadeSoloModel model,
+            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "sensor/irrigacao")] [FromBody] HumidadeSoloModel model,
             HttpRequest req,           
             ILogger log)
         {

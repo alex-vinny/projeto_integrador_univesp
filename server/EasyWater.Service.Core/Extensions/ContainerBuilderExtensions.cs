@@ -20,6 +20,12 @@ namespace EasyWater.Service.Core.Extensions
               .AsImplementedInterfaces()
               .InstancePerTriggerRequest();
 
+            builder
+             .RegisterType<ReportService>()
+             .As<IReportService>()
+             .AsImplementedInterfaces()
+             .InstancePerTriggerRequest();
+
             return builder;
         }
     }

@@ -19,7 +19,7 @@ namespace EasyWater.Service.Functions
 
         [FunctionName("RunTokenGet")]        
         public async Task<IActionResult> RunGetToken(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "auth/get")] HttpRequest req,
             ILogger log)
         {
             int.TryParse(req.Query["codigo"], out int codigo);
@@ -37,7 +37,7 @@ namespace EasyWater.Service.Functions
 
         [FunctionName("RunTokenRenew")]
         public async Task<IActionResult> RunRenewToken(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "auth/renew")] HttpRequest req,
             ILogger log)
         {
             Guid.TryParse(req.Query["chave"], out Guid codigo);
