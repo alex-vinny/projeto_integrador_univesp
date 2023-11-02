@@ -1,11 +1,9 @@
 ﻿using EasyWater.Domain;
 using EasyWater.Domain.Models.Api;
 using EasyWater.Service.Core.Entities;
-using MoreLinq.Experimental;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using static FreeSql.Internal.GlobalFilter;
 
 namespace EasyWater.Service.Core.Services
 {
@@ -33,7 +31,8 @@ namespace EasyWater.Service.Core.Services
             ValidateFlora(floraId);
 
             var select = _freeSql.Select<TEntity>()
-                .Where(a => a.DonoId == floraId && a.Deletado == false);
+                .Where(a => a.DonoId == floraId && a.Deletado == false)
+                .Where(c => c.CriadoEm >= filter.dataIni && c.CriadoEm <= filter.dataFin);
 
             var total = await select.CountAsync();
             return await select.Page(filter.page, filter.pageSize).ToListAsync();

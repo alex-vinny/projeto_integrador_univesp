@@ -11,8 +11,8 @@ namespace EasyWater.Domain.Models.Api
             waterings = list;
         }
 
-        public Watering max => waterings.Maxima(c => c.date).Where(c => c.value).First();
-        public Watering min => waterings.Minima(c => c.date).Where(c => c.value).First();
+        public Watering max => waterings.Where(c => c.value)?.Maxima(c => c.date)?.First();
+        public Watering min => waterings.Where(c => c.value)?.Minima(c => c.date)?.First();
         public List<Watering> average => waterings.Where(c => c.value && c.date <= max.date && c.date >= min.date).ToList();
         public object control => new
         {

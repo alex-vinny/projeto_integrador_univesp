@@ -8,7 +8,7 @@ namespace EasyWater.Domain.Models.Api
         {
             dataIni = DateTime.Now.AddDays(-30);
             dataFin = DateTime.Now;
-            total = 1000;
+            total = 10000;
         }
 
         public DateTime dataIni { get; set; }
